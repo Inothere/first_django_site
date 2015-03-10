@@ -1,0 +1,32 @@
+<html lang="zh-cn">
+<head>
+<title>上传文件</title>
+</head>
+
+<body>
+<form enctype="multipart/form-data" method="POST" action="/upload/">
+<span>
+    {{ form.as_table }}
+    <input type="submit" value="注册">
+</span>
+</form>
+    <table id="all_student">
+        <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>生日</th>
+        <th>学号</th>
+        </thead>
+        {% for item in all_student %}
+            <tr>
+            <td>{{ item.0 }}</td>
+            <td>{{ item.1 }}</td>
+            <td>{{ item.2 }}</td>
+            <td>{{ item.3 }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>
